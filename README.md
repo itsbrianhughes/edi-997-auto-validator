@@ -345,9 +345,9 @@ pytest --cov=src
 ## Documentation
 
 This project is self-contained and documented through:
-- In-code docstrings
-- Clear architectural overview
-- Examples and tests
+- Clear README with Quickstart and Architecture Overview
+- In-code docstrings and type hints
+- Comprehensive unit tests
 
 ---
 
@@ -374,7 +374,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **GitHub Repository:** [https://github.com/itsbrianhughes/edi-997-auto-validator](https://github.com/itsbrianhughes/edi-997-auto-validator)
 - **Issue Tracker:** [https://github.com/itsbrianhughes/edi-997-auto-validator/issues](https://github.com/itsbrianhughes/edi-997-auto-validator/issues)
-- **Live Demo:** *(Coming soon - deployed to Streamlit Cloud)*
+- **Live Demo:** *Run locally using Quickstart guide above*
 
 ---
 
