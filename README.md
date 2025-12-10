@@ -344,10 +344,10 @@ pytest --cov=src
 
 ## Documentation
 
-- [API Documentation](docs/api.md) *(coming soon)*
-- [Configuration Guide](docs/configuration.md) *(coming soon)*
-- [EDI 997 Standard Reference](docs/edi-997-reference.md) *(coming soon)*
-- [Deployment Guide](docs/deployment.md) *(coming soon)*
+This project is self-contained and documented through:
+- In-code docstrings
+- Clear architectural overview
+- Examples and tests
 
 ---
 
