@@ -1,0 +1,153 @@
+# EDI 997 Validation Rules Configuration
+
+validation:
+  # Strict mode treats warnings as errors
+  strict_mode: false
+
+  # Stop processing after N errors (0 = unlimited)
+  max_errors_before_abort: 0
+
+  # Validation behavior
+  behavior:
+    require_isa_segment: true
+    require_gs_segment: true
+    require_st_segment: true
+    require_ak1_segment: true
+    require_ak9_segment: true
+    allow_missing_ak2: false  # Some 997s may not have AK2 if fully accepted
+    validate_control_numbers: true
+    validate_segment_counts: true
+
+  # Classification rules
+  classification:
+    # Codes that result in ACCEPTED status
+    accepted_codes: ["A"]
+
+    # Codes that result in PARTIAL status
+    partial_codes: ["E", "P"]
+
+    # Codes that result in REJECTED status
+    rejected_codes: ["R", "M", "W", "X"]
+
+    # Error severity thresholds
+    # Transaction is rejected if it has >= N errors of given severity
+    rejection_thresholds:
+      error: 1      # Any error = rejection
+      warning: 0    # Warnings don't cause rejection by default
+      info: 0
+
+    # If strict_mode is true, treat these as errors
+    strict_mode_escalations:
+      warning: "error"
+      info: "warning"
+
+  # Reconciliation settings
+  reconciliation:
+    # Require outbound transaction match (if reference data provided)
+    require_outbound_match: false
+
+    # Timestamp tolerance in seconds (for matching transactions by time)
+    match_tolerance_seconds: 300  # 5 minutes
+
+    # Match on these fields
+    match_fields:
+      - "st_control_number"
+      - "gs_control_number"
+      - "transaction_type"
+
+    # Report unmatched transactions
+    report_unmatched: true
+
+    # Report orphaned outbound (sent but not acknowledged)
+    report_orphaned: true
+
+  # Reporting configuration
+  reporting:
+    # Maximum errors to include per transaction (prevent massive reports)
+    max_errors_per_transaction: 100
+
+    # Include fully accepted transactions in error report
+    include_accepted_in_report: false
+
+    # Group errors by segment type
+    group_errors_by_segment: true
+
+    # Sort errors by severity (error > warning > info)
+    sort_by_severity: true
+
+    # Include segment line numbers in report
+    include_line_numbers: true
+
+    # Generate summary statistics
+    include_summary: true
+
+    # Output formats
+    formats:
+      json: true
+      markdown: true
+      html: false
+      excel: false
+
+  # Parser settings
+  parser:
+    # Auto-detect delimiters from ISA segment
+    auto_detect_delimiters: true
+
+    # Default delimiters if auto-detection fails
+    default_delimiters:
+      element: "*"
+      segment: "~"
+      sub_element: ":"
+      repetition: "^"
+
+    # Trim whitespace from elements
+    trim_whitespace: true
+
+    # Handle line breaks in EDI files
+    preserve_line_breaks: false
+
+    # Maximum file size in MB
+    max_file_size_mb: 10
+
+  # Performance settings
+  performance:
+    # Enable profiling (logs timing information)
+    enable_profiling: false
+
+    # Log slow operations (operations taking > N seconds)
+    slow_operation_threshold_seconds: 1.0
+
+    # Cache parsed results (useful for batch processing)
+    enable_caching: false
+
+    # Max cache size (number of files)
+    max_cache_size: 100
+
+# Environment-specific overrides
+# These can be overridden via environment variables
+environment:
+  development:
+    validation:
+      strict_mode: false
+    performance:
+      enable_profiling: true
+    reporting:
+      include_accepted_in_report: true
+
+  production:
+    validation:
+      strict_mode: true
+      max_errors_before_abort: 1000
+    performance:
+      enable_profiling: false
+      enable_caching: true
+    reporting:
+      include_accepted_in_report: false
+
+  testing:
+    validation:
+      strict_mode: true
+    performance:
+      enable_profiling: true
+    reporting:
+      include_accepted_in_report: true

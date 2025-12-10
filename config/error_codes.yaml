@@ -1,0 +1,222 @@
+# X12 997 Functional Acknowledgment Error Codes
+# Reference: ANSI ASC X12 Standards
+
+ak_error_codes:
+  # AK403 - Segment Syntax Error Codes
+  segment_syntax_errors:
+    "1":
+      code: "1"
+      description: "Unrecognized segment ID"
+      severity: "error"
+    "2":
+      code: "2"
+      description: "Unexpected segment"
+      severity: "error"
+    "3":
+      code: "3"
+      description: "Required segment missing"
+      severity: "error"
+    "4":
+      code: "4"
+      description: "Loop occurs over maximum times"
+      severity: "error"
+    "5":
+      code: "5"
+      description: "Segment exceeds maximum use"
+      severity: "error"
+    "6":
+      code: "6"
+      description: "Segment not in defined transaction set"
+      severity: "error"
+    "7":
+      code: "7"
+      description: "Segment not in proper sequence"
+      severity: "error"
+    "8":
+      code: "8"
+      description: "Segment has data element errors"
+      severity: "warning"
+
+  # AK503 - Data Element Syntax Error Codes
+  element_syntax_errors:
+    "1":
+      code: "1"
+      description: "Mandatory data element missing"
+      severity: "error"
+    "2":
+      code: "2"
+      description: "Conditional required data element missing"
+      severity: "error"
+    "3":
+      code: "3"
+      description: "Too many data elements"
+      severity: "error"
+    "4":
+      code: "4"
+      description: "Data element too short"
+      severity: "error"
+    "5":
+      code: "5"
+      description: "Data element too long"
+      severity: "error"
+    "6":
+      code: "6"
+      description: "Invalid character in data element"
+      severity: "error"
+    "7":
+      code: "7"
+      description: "Invalid code value"
+      severity: "error"
+    "8":
+      code: "8"
+      description: "Invalid date"
+      severity: "error"
+    "9":
+      code: "9"
+      description: "Invalid time"
+      severity: "error"
+    "10":
+      code: "10"
+      description: "Exclusion condition violated"
+      severity: "error"
+    "11":
+      code: "11"
+      description: "Too many repetitions"
+      severity: "error"
+    "12":
+      code: "12"
+      description: "Too many components"
+      severity: "error"
+    "13":
+      code: "13"
+      description: "Not used - Reserved for future use"
+      severity: "info"
+
+  # AK901 - Functional Group Acknowledgment Codes
+  functional_group_ack_codes:
+    "A":
+      code: "A"
+      description: "Accepted"
+      severity: "success"
+      classification: "accepted"
+    "E":
+      code: "E"
+      description: "Accepted but errors noted"
+      severity: "warning"
+      classification: "partial"
+    "M":
+      code: "M"
+      description: "Rejected - Message authentication code (MAC) failed"
+      severity: "error"
+      classification: "rejected"
+    "P":
+      code: "P"
+      description: "Partially accepted, at least one transaction set rejected"
+      severity: "warning"
+      classification: "partial"
+    "R":
+      code: "R"
+      description: "Rejected"
+      severity: "error"
+      classification: "rejected"
+    "W":
+      code: "W"
+      description: "Rejected - Assurance failed validity tests"
+      severity: "error"
+      classification: "rejected"
+    "X":
+      code: "X"
+      description: "Rejected - Content after decryption could not be analyzed"
+      severity: "error"
+      classification: "rejected"
+
+  # AK502-AK506 - Transaction Set Syntax Error Codes (Code List 718)
+  transaction_set_syntax_errors:
+    "1":
+      code: "1"
+      description: "Transaction set not supported"
+      severity: "error"
+    "2":
+      code: "2"
+      description: "Transaction set trailer missing"
+      severity: "error"
+    "3":
+      code: "3"
+      description: "Transaction set control number in header and trailer do not match"
+      severity: "error"
+    "4":
+      code: "4"
+      description: "Number of included segments does not match actual count"
+      severity: "error"
+    "5":
+      code: "5"
+      description: "One or more segments in error"
+      severity: "error"
+    "6":
+      code: "6"
+      description: "Missing or invalid transaction set identifier"
+      severity: "error"
+    "7":
+      code: "7"
+      description: "Missing or invalid transaction set control number"
+      severity: "error"
+
+  # AK501 - Transaction Set Acknowledgment Codes
+  transaction_set_ack_codes:
+    "A":
+      code: "A"
+      description: "Accepted"
+      severity: "success"
+      classification: "accepted"
+    "E":
+      code: "E"
+      description: "Accepted but errors noted"
+      severity: "warning"
+      classification: "partial"
+    "M":
+      code: "M"
+      description: "Rejected - Message authentication code (MAC) failed"
+      severity: "error"
+      classification: "rejected"
+    "P":
+      code: "P"
+      description: "Partially accepted, at least one segment rejected"
+      severity: "warning"
+      classification: "partial"
+    "R":
+      code: "R"
+      description: "Rejected"
+      severity: "error"
+      classification: "rejected"
+    "W":
+      code: "W"
+      description: "Rejected - Assurance failed validity tests"
+      severity: "error"
+      classification: "rejected"
+    "X":
+      code: "X"
+      description: "Rejected - Content after decryption could not be analyzed"
+      severity: "error"
+      classification: "rejected"
+
+  # AK304 - Element Position in Segment (for error reporting)
+  # This is a numeric position, not a code lookup
+
+  # Custom Extensions (Optional)
+  custom_errors:
+    "PARSE_ERROR":
+      code: "PARSE_ERROR"
+      description: "Failed to parse EDI file"
+      severity: "error"
+    "DELIMITER_ERROR":
+      code: "DELIMITER_ERROR"
+      description: "Unable to detect delimiters from ISA segment"
+      severity: "error"
+    "MISSING_ENVELOPE":
+      code: "MISSING_ENVELOPE"
+      description: "Required envelope segment missing (ISA/GS/ST)"
+      severity: "error"
+    "CONTROL_NUMBER_MISMATCH":
+      code: "CONTROL_NUMBER_MISMATCH"
+      description: "Control numbers do not match"
+      severity: "error"
