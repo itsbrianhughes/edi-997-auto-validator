@@ -9,7 +9,7 @@
 
 ---
 
-## 📊 Project Overview
+## Project Overview
 
 ### What is EDI 997?
 
@@ -37,7 +37,7 @@ This **EDI 997 Auto-Validator** is an enterprise-grade Python application that:
 
 ---
 
-## ✨ Features
+## Features
 
 ### Core Capabilities
 - ✅ **Complete 997 Parsing** - Handles ISA/GS/ST envelopes and all AK* segments (AK1-AK9)
@@ -61,7 +61,7 @@ This **EDI 997 Auto-Validator** is an enterprise-grade Python application that:
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### Prerequisites
 - **Python 3.11+**
@@ -124,7 +124,7 @@ pytest -v
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Interactive Dashboard
 ![Streamlit Dashboard](docs/dashboard.png)
@@ -191,7 +191,7 @@ pytest -v
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -256,7 +256,7 @@ pytest -v
 
 ---
 
-## 💼 Why This Project Matters for Integration Engineering
+## Why This Project Matters for Integration Engineering
 
 ### Real-World Business Impact
 
@@ -296,7 +296,7 @@ pytest -v
 
 ---
 
-## 📚 Project Structure
+## Project Structure
 
 ```
 edi-997-validator/
@@ -324,7 +324,7 @@ edi-997-validator/
 
 ---
 
-## 🧪 Testing & Code Quality
+## Testing & Code Quality
 
 - **248 Tests** - All passing ✅
 - **91.22% Coverage** - Comprehensive test suite
@@ -342,7 +342,7 @@ pytest --cov=src
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 - [API Documentation](docs/api.md) *(coming soon)*
 - [Configuration Guide](docs/configuration.md) *(coming soon)*
@@ -351,7 +351,7 @@ pytest --cov=src
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please:
 
@@ -364,26 +364,26 @@ Contributions welcome! Please:
 
 ---
 
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🔗 Links
+## Links
 
-- **GitHub Repository:** [https://github.com/yourusername/edi-997-validator](https://github.com/yourusername/edi-997-validator)
-- **Issue Tracker:** [https://github.com/yourusername/edi-997-validator/issues](https://github.com/yourusername/edi-997-validator/issues)
+- **GitHub Repository:** [https://github.com/yourusername/edi-997-auto-validator](https://github.com/yourusername/edi-997-auto-validator)
+- **Issue Tracker:** [https://github.com/yourusername/edi-997-auto-validator/issues](https://github.com/yourusername/edi-997-auto-validator/issues)
 - **Live Demo:** *(Coming soon - deployed to Streamlit Cloud)*
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Your Name**
+**Brian Hughes**
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@itsbrianhughes](https://github.com/itsbrianhughes)
+- Email: itsbrianhughes@gmail.com
 
 ---
 
