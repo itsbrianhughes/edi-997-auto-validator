@@ -372,8 +372,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Links
 
-- **GitHub Repository:** [https://github.com/yourusername/edi-997-auto-validator](https://github.com/yourusername/edi-997-auto-validator)
-- **Issue Tracker:** [https://github.com/yourusername/edi-997-auto-validator/issues](https://github.com/yourusername/edi-997-auto-validator/issues)
+- **GitHub Repository:** [https://github.com/itsbrianhughes/edi-997-auto-validator](https://github.com/itsbrianhughes/edi-997-auto-validator)
+- **Issue Tracker:** [https://github.com/itsbrianhughes/edi-997-auto-validator/issues](https://github.com/itsbrianhughes/edi-997-auto-validator/issues)
 - **Live Demo:** *(Coming soon - deployed to Streamlit Cloud)*
 
 ---
