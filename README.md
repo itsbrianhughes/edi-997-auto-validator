@@ -381,7 +381,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Author
 
 **Brian Hughes**
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- LinkedIn: [https://www.linkedin.com/in/b-hughes/](https://www.linkedin.com/in/b-hughes/)
 - GitHub: [@itsbrianhughes](https://github.com/itsbrianhughes)
 - Email: itsbrianhughes@gmail.com
 
