@@ -71,6 +71,22 @@ In many organizations, 997 files are received but not systematically validated o
 
 This project simulates how 997 acknowledgments are processed and analyzed in real production environments to ensure transactional visibility and operational control.
 
+### Example Scenario
+A mid-market supplier sends multiple outbound EDI documents (e.g., purchase order responses, ASNs, or invoices) to a large retailer.
+
+Although the outbound files are transmitted successfully, the retailer returns a 997 indicating that:
+	•	some transaction sets were accepted,
+	•	others were rejected due to segment or element-level errors, or
+	•	acknowledgments reference transaction control numbers that cannot be reconciled to outbound activity.
+
+Without automated validation, operations teams must manually inspect raw EDI text to identify failures — a slow, error-prone process.
+
+This validator automates that analysis by:
+	•	parsing functional acknowledgments at the segment and element level,
+	•	classifying acceptance status (ACCEPTED / PARTIALLY ACCEPTED / REJECTED),
+	•	extracting and mapping X12 error codes to human-readable explanations, and
+	•	reconciling acknowledgments against outbound transaction control numbers to identify missing or unexpected responses.
+
 ## Quickstart
 
 ### Prerequisites
