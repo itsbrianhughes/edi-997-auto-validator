@@ -87,6 +87,17 @@ This validator automates that analysis by:
 	•	extracting and mapping X12 error codes to human-readable explanations, and
 	•	reconciling acknowledgments against outbound transaction control numbers to identify missing or unexpected responses.
 
+### Operational Value
+This project demonstrates how organizations can:
+	•	detect rejected transactions immediately after receipt,
+	•	prevent silent failures caused by unmonitored acknowledgments,
+	•	reduce manual EDI troubleshooting effort, and
+	•	improve auditability and compliance reporting across trading partner integrations.
+
+The architecture mirrors real EDI operations teams’ workflows, combining automated validation, reconciliation logic, and human-readable reporting.
+
+---
+
 ## Quickstart
 
 ### Prerequisites
