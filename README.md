@@ -61,8 +61,9 @@ This **EDI 997 Auto-Validator** is an enterprise-grade Python application that:
 
 ---
 
-##Real-World Business Context
+## Business Context
 
+### Real-World Business Context
 In real EDI operations, suppliers often exchange thousands of transactions daily with retailers and logistics partners.
 While outbound documents may be successfully transmitted, the true indicator of success is the EDI 997 Functional Acknowledgment confirming whether each transaction was accepted, partially accepted, or rejected.
 
