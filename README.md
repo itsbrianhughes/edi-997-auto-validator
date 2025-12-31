@@ -35,6 +35,28 @@ This **EDI 997 Auto-Validator** is an enterprise-grade Python application that:
 
 **Perfect for:** Integration engineers, EDI specialists, B2B developers, and anyone managing electronic business document exchanges.
 
+### Why it matters (customer outcomes)
+
+When acknowledgments are misread or missed:
+- Orders don’t ship
+- Invoices get rejected
+- Retailer compliance penalties happen
+- Support teams waste hours decoding cryptic errors
+
+This tool is designed to turn “EDI mystery” into:
+✅ clear status  
+✅ clear root cause  
+✅ clear next action
+
+---
+
+## How an SE uses this in presales / implementation
+
+- Show customers how success is verified (not assumed)
+- Prove you have monitoring + reconciliation concepts
+- Demonstrate “supportability” (plain-English errors, reports, audit trail)
+- Reduce fear around go-live by showing how failures are handled
+
 ---
 
 ## Features
